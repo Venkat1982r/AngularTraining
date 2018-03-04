@@ -1,0 +1,17 @@
+<p>
+  home works! {{Counter}}
+</p>
+<form [formGroup]="loginForm" (ngSubmit)="login()">
+  <label>Username</label>
+  <input type="text" formControlName="username"><br>
+  <label>Password</label>
+  <input type="text" formControlName="password"><br>
+  <label>Email</label>
+  <input type="text" formControlName="email"><br>
+  <div formGroupName="address">
+    <label>State</label>
+    <input type="text" formControlName="state">
+  </div><br>
+  <button type="submit" [disabled]="!loginForm.valid">Log in</button><br>
+</form>
+
